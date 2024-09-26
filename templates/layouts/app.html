@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <title>Dashboard | Lexa - Responsive Bootstrap 4 Admin Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+    <meta content="Themesbrand" name="author" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
+    
+    <!-- Bootstrap Css -->
+    <link href="{% static 'css/bootstrap.min.css' %}" id="bootstrap-style" rel="stylesheet" type="text/css" />
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.min.css' %} rel="stylesheet" type="text/css" />
+    <!-- App Css -->
+    <link href="{% static 'css/app.min.css' %}" id="app-style" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body data-sidebar="dark">
+
+    <!-- Begin page -->
+    <div id="layout-wrapper">
+
+        {% include "elements/header.html" %}
+        
+        <!-- ========== Left Sidebar Start ========== -->
+        {% include "elements/menu.html" %}
+        
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start right Content here -->
+        <!-- ============================================================== -->
+        <div class="main-content">
+
+            <div class="page-content">
+                <div class="container-fluid">
+
+                    <!-- start page title -->
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="page-title-box">
+                                <h4>Dashboard</h4>
+                                    <ol class="breadcrumb m-0">
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Lexa</a></li>
+                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                        <li class="breadcrumb-item active">Dashboard</li>
+                                    </ol>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="state-information d-none d-sm-block">
+                                <div class="state-graph">
+                                    <div id="header-chart-1"></div>
+                                    <div class="info">Balance $ 2,317</div>
+                                </div>
+                                <div class="state-graph">
+                                    <div id="header-chart-2"></div>
+                                    <div class="info">Item Sold 1230</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end page title -->
+
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card mini-stat bg-primary">
+                                <div class="card-body mini-stat-img">
+                                    <div class="mini-stat-icon">
+                                        <i class="mdi mdi-cube-outline float-right"></i>
+                                    </div>
+                                    <div class="text-white">
+                                        <h6 class="text-uppercase mb-3 font-size-16">Orders</h6>
+                                        <h2 class="mb-4">1,587</h2>
+                                        <span class="badge badge-info"> +11% </span> <span class="ml-2">From previous period</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card mini-stat bg-primary">
+                                <div class="card-body mini-stat-img">
+                                    <div class="mini-stat-icon">
+                                        <i class="mdi mdi-buffer float-right"></i>
+                                    </div>
+                                    <div class="text-white">
+                                        <h6 class="text-uppercase mb-3 font-size-16">Revenue</h6>
+                                        <h2 class="mb-4">$46,782</h2>
+                                        <span class="badge badge-danger"> -29% </span> <span class="ml-2">From previous period</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card mini-stat bg-primary">
+                                <div class="card-body mini-stat-img">
+                                    <div class="mini-stat-icon">
+                                        <i class="mdi mdi-tag-text-outline float-right"></i>
+                                    </div>
+                                    <div class="text-white">
+                                        <h6 class="text-uppercase mb-3 font-size-16">Average Price</h6>
+                                        <h2 class="mb-4">$15.9</h2>
+                                        <span class="badge badge-warning"> 0% </span> <span class="ml-2">From previous period</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6">
+                            <div class="card mini-stat bg-primary">
+                                <div class="card-body mini-stat-img">
+                                    <div class="mini-stat-icon">
+                                        <i class="mdi mdi-briefcase-check float-right"></i>
+                                    </div>
+                                    <div class="text-white">
+                                        <h6 class="text-uppercase mb-3 font-size-16">Product Sold</h6>
+                                        <h2 class="mb-4">1890</h2>
+                                        <span class="badge badge-info"> +89% </span> <span class="ml-2">From previous period</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row">
+
+                        <div class="col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Monthly Earnings</h4>
+
+                                    <div class="row text-center mt-4">
+                                        <div class="col-6">
+                                            <h5 class="font-size-20">$56241</h5>
+                                            <p class="text-muted">Marketplace</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="font-size-20">$23651</h5>
+                                            <p class="text-muted">Total Income</p>
+                                        </div>
+                                    </div>
+
+                                    <div id="morris-donut-example" class="morris-charts morris-charts-height" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Email Sent</h4>
+
+                                    <div class="row text-center mt-4">
+                                        <div class="col-4">
+                                            <h5 class="font-size-20">$ 89425</h5>
+                                            <p class="text-muted">Marketplace</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="font-size-20">$ 56210</h5>
+                                            <p class="text-muted">Total Income</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5 class="font-size-20">$ 8974</h5>
+                                            <p class="text-muted">Last Month</p>
+                                        </div>
+                                    </div>
+
+                                    <div id="morris-area-example" class="morris-charts morris-charts-height" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title mb-4">Monthly Earnings</h4>
+
+                                    <div class="row text-center mt-4">
+                                        <div class="col-6">
+                                            <h5 class="font-size-20">$ 2548</h5>
+                                            <p class="text-muted">Marketplace</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <h5 class="font-size-20">$ 6985</h5>
+                                            <p class="text-muted">Total Income</p>
+                                        </div>
+                                    </div>
+
+                                    <div id="morris-bar-stacked" class="morris-charts morris-charts-height" dir="ltr"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end row -->
+
+
+                    {% include "elements/menu.html" %}
+                </div>
+                <!-- end main content-->
+
+            </div>
+            <!-- END layout-wrapper -->
+
+            <!-- Right Sidebar -->
+            <div class="right-bar">
+                <div data-simplebar class="h-100">
+                    <div class="rightbar-title px-3 py-4">
+                        <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                            <i class="mdi mdi-close noti-icon"></i>
+                        </a>
+                        <h5 class="m-0">Settings</h5>
+                    </div>
+
+                    <!-- Settings -->
+                    <hr class="mt-0" />
+                    <h6 class="text-center mb-0">Choose Layouts</h6>
+
+                    <div class="p-4">
+                        <div class="mb-2">
+                            <img src="{% static 'images/layouts/layout-1.jpg'%}" class="img-fluid img-thumbnail" alt="">
+                        </div>
+                        <div class="custom-control custom-switch mb-3">
+                            <input type="checkbox" class="custom-control-input theme-choice" id="light-mode-switch" checked />
+                            <label class="custom-control-label" for="light-mode-switch">Light Mode</label>
+                        </div>
+    
+                        <div class="mb-2">
+                            <img src="{% static 'images/layouts/layout-2.jpg'%}" class="img-fluid img-thumbnail" alt="">
+                        </div>
+                        <div class="custom-control custom-switch mb-3">
+                            <input type="checkbox" class="custom-control-input theme-choice" id="dark-mode-switch" data-bsStyle="assets/css/bootstrap-dark.min.css" data-appStyle="{% static 'css/app-dark.min.css'%}" />
+                            <label class="custom-control-label" for="dark-mode-switch">Dark Mode</label>
+                        </div>
+                    </div>
+
+                </div> <!-- end slimscroll-menu-->
+            </div>
+            <!-- /Right-bar -->
+
+            <!-- Right bar overlay-->
+            <div class="rightbar-overlay"></div> 
+            
+            {% include "elements/scripts.html" %}
+
+            <div class="container-fluid">
+                <div class="row">
+        
+        
+                    <div class="col-md-9 main-content">
+                        {% block content %}
+                        
+                        {% endblock content %}
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
